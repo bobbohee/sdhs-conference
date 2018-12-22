@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>SDHS Conference 2018</title>
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -19,10 +19,10 @@
   <div id="wrap">
     <div id="survey">
       <h3><span>SDHS</span> Conference 2018</h3>
-      <form action="survey-ok.php" method="get">
+      <form action="survey-ok.php" method="POST">
         <div class="form-group">
           <input type="hidden" name="sid" value="<?php echo $sid; ?>">
-          <select class="custom-select" required>
+          <select name="best" class="custom-select" required>
             <option selected disabled value="">BEST 강의를 선택해주세요</option>
             <option value="1">팀 프로젝트 경험담 ( KOI )</option>
             <option value="2">실리콘밸리 연수 경험담 ( KOI )</option>
@@ -42,10 +42,10 @@
           <textarea class="form-control" id="good" name="good" rows="3" required></textarea>
         </div>
         <div class="form-group">
-          <label for="improve">* 개선되었면 하는 점을 입력해주세요</label>
+          <label for="improve">* 개선되었으면 하는 점을 입력해주세요</label>
           <textarea class="form-control" id="improve" name="improve" rows="3" required></textarea>
         </div>
-      <button type="submit" class="btn btn-primary">제출</button>
+      <button type="submit" class="btn btn-primary">설문조사 제출하기</button>
       </form>
     </div>
   </div>
