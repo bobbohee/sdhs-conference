@@ -24,26 +24,26 @@
           <input type="hidden" name="sid" value="<?php echo $sid; ?>">
           <select name="best" class="custom-select" required>
             <option selected disabled value="">BEST 강의를 선택해주세요</option>
-            <option value="1">팀 프로젝트 경험담 ( KOI )</option>
-            <option value="2">실리콘밸리 연수 경험담 ( KOI )</option>
+            <option value="1">처음엔 누구나 다 그렇다 ( KOI )</option>
+            <option value="2">실리콘밸리로 가는 길 ( KOI )</option>
             <option value="3">동아리 소개 ( MOD )</option>
-            <option value="4">동아리 결과물 발표 ( MOD )</option>
+            <option value="4">해커가 되는 방법 ( ROOT )</option>
             <option value="5">2018 ON 총결산 ( ON )</option>
             <option value="6">BSP와 랜덤맵 알고리즘 ( ON )</option>
-            <option value="7">회사의 경험과 노하우 ( ON )</option>
-            <option value="8">Image Detection ( SS )</option>
-            <option value="9">WEB & CHATBOT ( SS )</option>
-            <option value="10">동아리 작품 소개 및 트렌드 ( TOI )</option>
-            <option value="11">동아리 소개 ( LUGH )</option>
+            <option value="7">남 탓하지 않기 ( ON )</option>
+            <option value="8">WEB & CHATBOT ( SS )</option>
+            <option value="9">크롤링과 이미지 인식 ( SS )</option>
+            <option value="10">변화하는 시대, 리더들의 방향 ( TOI )</option>
+            <option value="11">전공과 자기 개발 ( LUGH )</option>
           </select>
         </div>
         <div class="form-group">
           <label for="good">* 좋았던 점 혹은 느낀 점을 입력해주세요</label>
-          <textarea class="form-control" id="good" name="good" rows="3" required></textarea>
+          <textarea class="form-control" id="good" name="good" rows="3" autocomplete="off" required></textarea>
         </div>
         <div class="form-group">
           <label for="improve">* 개선되었으면 하는 점을 입력해주세요</label>
-          <textarea class="form-control" id="improve" name="improve" rows="3" required></textarea>
+          <textarea class="form-control" id="improve" name="improve" rows="3" autocomplete="off" required></textarea>
         </div>
       <button type="submit" class="btn btn-primary">설문조사 제출하기</button>
       </form>

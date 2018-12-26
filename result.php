@@ -12,15 +12,16 @@
 </head>
 <body>
   <?php 
-    $sql = "SELECT best, count(best) as cnt FROM student group by best";
-    $res = mysqli_query($con, $sql);
+    $sql = "SELECT best, count(best) as cnt FROM sdhs group by best";
+    $res = $db->query($sql);
     
-    while($row =  mysqli_fetch_array($res)) {
-    $best = $row['best'];
-    $cnt = $row['cnt'];
+    $rows = $res->fetchAll();
+    foreach($rows as $row):
+      $best = $row['best'];
+      $cnt = $row['cnt'];
   ?>
     <input type="hidden" id="best<?php echo $best; ?>" value="<?php echo $cnt; ?>">
-  <?php } ?>
+  <?php endforeach; ?>
   <div id="wrap">
     <div id="result">
       <h3><span>SDHS</span> Conference 2018</h3>
@@ -46,10 +47,10 @@
     var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ["김민규, 김재현", "한재상", "김원길", "은영환", "최찬우", "조가연", "이용기", "최정익", "허정욱, 전승민", "박보희", "김영종", "김유빈"],
+        labels: ["김민규, 김재현", "한재상", "김원길, 은영환", "최찬우", "조가연", "이용기", "최정익", "허정욱, 전승민", "박보희", "김영종", "김유빈"],
         datasets: [{
           label: '',
-          data: [arr[0], 5, arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10], arr[11]],
+          data: [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10], arr[11]],
           backgroundColor: [
             'rgba(255, 116, 115, 0.8)',
             'rgba(255, 201, 82, 0.8)',
@@ -59,10 +60,9 @@
             'rgba(238, 119, 133, 0.8)',
             'rgba(200, 158, 196, 0.8)',
             'rgba(132, 177, 237, 0.8)',
-            'rgba(153, 102, 255, 0.8)',
             'rgba(255, 188, 66, 0.8)',
-            'rgba(255, 99, 132, 0.8)',
-            'rgba(54, 162, 235, 0.8)'
+            'rgba(153, 102, 255, 0.8)',
+            'rgba(255, 99, 132, 0.8)'
           ],
           borderColor: [
             'rgba(255, 116, 115, 1)',
@@ -73,10 +73,9 @@
             'rgba(238, 119, 133, 1)',
             'rgba(200, 158, 196, 1)',
             'rgba(132, 177, 237, 1)',
-            'rgba(153, 102, 255, 1)',
             'rgba(255, 188, 66, 1)',
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)'
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 99, 132, 1)'
           ],
           borderWidth: 2,
         }]

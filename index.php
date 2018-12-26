@@ -17,7 +17,7 @@
       <form action="survey.php" method="get">
         <div class="form-group">
           <label for="sid">학번을 입력해주세요</label>
-          <input type="text" class="form-control" id="sid" name="sid" maxlength="5" required>
+          <input type="text" class="form-control" id="sid" name="sid" maxlength="5" autocomplete="off" required>
         </div>
         <button type="submit" class="btn btn-primary">설문조사 하러가기</button>
       </form>
